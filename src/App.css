@@ -1,0 +1,147 @@
+
+.App {
+  box-sizing: border-box;
+  font-family: sans-serif, "Inter";
+}
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -moz-box-align: right;
+  width: 400px;
+  height: 80vh;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  margin-right: 80px;
+  font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-weight: 400; 
+}
+
+.grid {
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 40px;
+  grid-template-areas: 'image image new' 'bright read new' 'card1 card2 card3';
+}
+
+.image {
+  grid-area: image;
+  max-width: 824px;
+}
+
+.new {
+  width: 10.2cm;
+  grid-area: new;
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  text-align: justify;
+  
+}
+
+.new > :first-child {
+  font-weight: bold;
+  color: var(--soft-orange);
+  font-size: 2em;
+  font-weight: bolder;
+  white-space: nowrap;
+  
+}
+
+.new p {
+  font-weight: lighter;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.new s {
+  font-weight: lighter;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  padding-right: 20px; 
+  font-size: 15px;
+  word-spacing: .05cm;
+  letter-spacing: .01cm;
+  text-align: justify;
+  max-height: fit-content;
+  
+}
+.bright {
+  grid-area: bright;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.read {
+  grid-area: read;
+  color: var(--dark-grayish-blue);
+  font-size: large;
+}
+.read button{
+  background-color:var(--soft-red) ;
+  color: var(--off-white);
+  height: 2.5cm;
+  width: 7.5cm; 
+  letter-spacing: .3cm;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border-color: var(--soft-red);
+}
+
+.card1 {
+  grid-area: card1;
+}
+.card1 text{
+  text-align: end;
+  font-size: 15px;
+  letter-spacing: .3cm;
+}
+img{
+  float: left;
+  margin-right: 10px;
+}
+.card2 {
+  grid-area: card2;
+}
+.card2 text{
+  text-align: right;
+  font-size: 15px;
+  letter-spacing: .3cm;
+}
+img{
+  float: left;
+  margin-right: 10px;
+}
+.card3 {
+  overflow: auto;
+  grid-area: card3;
+}
+
+.card3 text{
+  text-align: right;
+  font-size: 15px;
+  letter-spacing: .3cm;
+}
+img{
+  float: left;
+  margin-right: 10px;
+}
